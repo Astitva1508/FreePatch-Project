@@ -1,0 +1,87 @@
+*{
+    box-sizing:border-box;
+}
+
+
+body{
+    background-color: #f3f0ec;
+    color:black;
+}
+
+/* Navigation Bar  */
+
+.navbar{
+    background: #fff;
+    box-shadow: 0 3px 6px 0 rgb(50 50 50 / 30%);
+}
+
+.nav-link:hover{
+    color:black
+}
+
+.nav-item{
+    font-size:30px;
+    color:black;
+    margin:0 12px;
+}
+
+.company-name{
+    font-family:'Noto Serif', serif;
+    font-size:1.5rem;
+    margin:0 1rem 0 0.5rem ;
+    /* letter-spacing: 0.25rem; */
+}
+i{
+    font-size:1.5rem;
+    margin:0 0.5rem;
+}
+
+/* Description  */
+
+.description{
+    margin-top:3rem;
+}
+
+.description-title{
+    margin:auto;
+    width:100%;
+    text-align:center;
+    font-weight: 600;
+    /* text-align:center; */
+    font-size:3rem;
+    font-family: rawline,Open Sans,Arial,sans-serif
+}
+
+.description-content{
+    margin: 0 auto;
+    width:80%
+}
+
+/* Input Link Section  */
+
+.input{
+    margin:3rem auto;
+    width:80%
+}
+
+.container-fluid{
+    padding:0 0 
+}
+
+/* Responsiveness */
+
+@media (max-width:600px){
+    .description-title{
+        /* width:80%; */
+        font-size:2rem;
+        margin-left:0.45rem;
+        text-align:left
+    }
+    .description-content{
+        margin-left:0.45rem;
+    }
+    .input{
+        margin:2rem 0 0  0.45rem;
+    }
+    
+}
