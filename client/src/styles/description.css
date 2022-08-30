@@ -1,0 +1,35 @@
+/* Description  */
+
+.description {
+    margin-top: 3rem;
+}
+
+.description-title {
+    margin: auto;
+    /* width:100%; */
+    text-align: center;
+    font-weight: 600;
+    /* text-align:center; */
+    font-size: 3rem;
+    font-family: rawline, Open Sans, Arial, sans-serif
+}
+
+.description-content {
+    margin: 0 auto;
+    width: 80%;
+    font-size: 1.5rem;
+}
+
+@media (max-width:600px) {
+    .description-title {
+        /* width:80%; */
+        font-size: 2rem;
+        margin-left: 0.45rem;
+        text-align: left
+    }
+
+    .description-content {
+        margin-left: 0.45rem;
+        font-size: 1rem;
+    }
+}
