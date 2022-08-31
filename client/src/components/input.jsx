@@ -1,17 +1,18 @@
 import React from 'react'
+import {InputGroup , Button} from 'react-bootstrap'
 import '../styles/input.css'
 
 const Input = () => {
   return (
     <React.Fragment>
         <section class="input">
-            <div class="input-group ">
+            <InputGroup size='lg'>
                 <input type="text" class="form-control" placeholder="Place product link" />
-            </div>
-            <div class="input-group order-btn">
+            </InputGroup>
+            <InputGroup className="order-btn">
                 <button type="submit" class="link-btn">LOREM IPSUM</button>
                 <button type="submit" class="link-btn">LOREM CONSECTETUR</button>
-            </div>
+            </InputGroup>
         </section>
     </React.Fragment>
   )

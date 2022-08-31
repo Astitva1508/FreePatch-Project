@@ -20,6 +20,7 @@
     font-size: 1.5rem;
 }
 
+
 @media (max-width:600px) {
     .description-title {
         /* width:80%; */

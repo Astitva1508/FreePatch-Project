@@ -1,0 +1,43 @@
+
+.login-container{
+    width: 50%;
+    box-shadow: 0 6px 16px 0 rgb(0 0 0/20%);    
+}
+
+
+.password-input span{
+    font-size: 1rem;
+    height: 100%; 
+    margin-left: -0.5em; 
+    background: white; 
+    border-left: none;
+}
+
+.password-input input{
+    border-right:none
+}
+
+
+.login-signup--btn{
+    margin:0;
+    padding:0;
+    height:2rem;
+}
+
+.line{
+    border: 0;
+    /* width: 33%; */
+    height: 0;
+    border-bottom: 2px solid #cdcdcd;
+}
+
+.signup{
+    display:flex;
+    align-items:center;
+}
+
+@media (max-width:600px) {
+    .container{
+        width:90%
+    }
+}

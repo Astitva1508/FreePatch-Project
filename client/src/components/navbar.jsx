@@ -1,20 +1,22 @@
 import React from 'react'
 import '../styles/navbar.css'
+import {Navbar , Nav , Container } from 'react-bootstrap'
+import {Link} from 'react-router-dom'
 
-const Navbar = () => {
+const HomeNavbar = () => {
   return (
     <React.Fragment>
-    <nav class="navbar navbar-expand">
-      <div class="container-fluid">
-        <a class="navbar-brand company-name" href="#">Lorem</a>
-        <ul class="navbar-nav">
-          <a href="" class="navbar-brand"><i class="fa-solid fa-cart-arrow-down"></i></a>
-          <a href="" class="navbar-brand"><i class="fa-solid fa-user"></i></a>
-        </ul>
-      </div>
-    </nav>
+    <Navbar className='navbar'>
+      <Container fluid>
+        <Navbar.Brand className="company-name" href="#">Lorem</Navbar.Brand>
+        <Nav>
+          <Navbar.Brand ><i className="fa-solid fa-cart-arrow-down"></i></Navbar.Brand>
+          <Navbar.Brand ><Link to='/login'><i className="fa-solid fa-user"></i></Link></Navbar.Brand>
+        </Nav>
+      </Container>
+    </Navbar>
     </React.Fragment>
   )
 }
 
-export default Navbar
+export default HomeNavbar
