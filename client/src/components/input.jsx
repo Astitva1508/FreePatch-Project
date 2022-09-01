@@ -1,5 +1,5 @@
 import React from 'react'
-import {InputGroup , Button} from 'react-bootstrap'
+import {InputGroup} from 'react-bootstrap'
 import '../styles/input.css'
 
 const Input = () => {
