@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ef86c3ff.css",
+    "main.js": "/static/js/main.26729b48.js",
+    "static/media/googleLogo.png": "/static/media/googleLogo.0590aaf0fe36e23dcc8c.png",
+    "static/media/twitterLogo.png": "/static/media/twitterLogo.f963dcac51d5020e10f3.png",
+    "index.html": "/index.html",
+    "main.ef86c3ff.css.map": "/static/css/main.ef86c3ff.css.map",
+    "main.26729b48.js.map": "/static/js/main.26729b48.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ef86c3ff.css",
+    "static/js/main.26729b48.js"
+  ]
+}
