@@ -14,6 +14,10 @@ const errorHandlerMiddleware=require('./middleware/errorHandler')
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
+app.use('/',(req,res)=>{
+    res.send('I am an entreprenuer')
+})
+
 app.use('/api/v1/auth',authRoute)
 
 
