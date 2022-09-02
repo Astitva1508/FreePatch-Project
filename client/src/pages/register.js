@@ -2,7 +2,8 @@ import React from 'react';
 import '../styles/login.css'
 import '../styles/register.css'
 import {Navbar,Container, Col,Row,Form} from 'react-bootstrap'
-import {githubLogo , googleLogo , linkedinLogo , twitterLogo} from '../assets/'
+// import {githubLogo , googleLogo , linkedinLogo , twitterLogo} from '../assets/'
+import GoogleButton from 'react-google-button'
 
 function RegisterPage() {
 
@@ -45,9 +46,27 @@ function RegisterPage() {
         </Col>
     </Container>
     <Container>
-        <Row className='mb-3' style={{justifyContent:'center'}}>
-            {/* <div class="col col-md-6 signup">
-             */}
+        <Row style={{justifyContent:'center'}} className='mb-3'>
+            <Col md={6} className='social-login'>
+            <Col xs={2} className='line' md={4} />
+            <Col xs={8} md={4} style={{
+                    padding:'0',
+                    textAlign:'center',
+                    fontWeight: '900',
+                    letterSpacing:'1px',
+                    fontSize: '.9rem',}}>
+                    OR
+                </Col>
+            <Col xs={2} className='line' md={4} />
+            </Col>
+        </Row>
+
+        <Row style={{justifyContent:'center'}}>
+            <Col md={6} className='social-login-icons'>
+                    <GoogleButton />
+            </Col>
+        </Row> 
+        {/* <Row className='mb-3' style={{justifyContent:'center'}}>
             <Col md={6} className='signup'>
                 <Col class="line col col-2 col-md-4 " xs={2} className='line' md={4} />
                 <Col xs={8} md={4} style={{
@@ -60,15 +79,15 @@ function RegisterPage() {
                 </Col>
                 <Col class="line col col-2 col-md-4 " xs={2} className='line' md={4} />
             </Col>
-        </Row>
-        <Row style={{justifyContent:'center'}}>
+        </Row> */}
+        {/* <Row style={{justifyContent:'center'}}>
             <Col md={6} className='social-login-icons'>
                     <Col xs={2}><img src={googleLogo} alt=''/></Col>
                     <Col xs={2}><img src={githubLogo} alt=''/></Col>
                     <Col xs={2}><img src={twitterLogo} alt=''/></Col>
                     <Col xs={2} ><img src={linkedinLogo} alt=''/></Col>
             </Col>
-        </Row>
+        </Row> */}
     </Container>
 </div>
   );

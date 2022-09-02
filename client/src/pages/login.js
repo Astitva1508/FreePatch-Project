@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import '../styles/login.css'
 import {Navbar,Container, Col,Row, InputGroup,Form} from 'react-bootstrap'
 import{Link} from 'react-router-dom'
-import {githubLogo , googleLogo , linkedinLogo , twitterLogo} from '../assets/'
+// import {githubLogo , googleLogo , linkedinLogo , twitterLogo} from '../assets/'
+import GoogleButton from 'react-google-button';
 
 function LoginPage() {
     const [showPassword , setShowPassword] = useState(false)
@@ -77,7 +78,29 @@ function LoginPage() {
             </Col>
         </Row>
 
+        <Row style={{justifyContent:'center'}} className='mb-3'>
+            <Col md={6} className='social-login'>
+            <Col xs={2} className='line' md={4} />
+            <Col xs={8} md={4} style={{
+                    padding:'0',
+                    textAlign:'center',
+                    fontWeight: '900',
+                    letterSpacing:'1px',
+                    fontSize: '.9rem',}}>
+                    OR
+                </Col>
+            <Col xs={2} className='line' md={4} />
+            </Col>
+        </Row>
+
         <Row style={{justifyContent:'center'}}>
+            <Col md={6} className='social-login-icons'>
+                    <GoogleButton />
+            </Col>
+        </Row> 
+
+
+        {/* <Row style={{justifyContent:'center'}}>
             <Col md={6} className='social-login'>
                 <Col xs={2} className='line' md={4} />
                 <Col xs={8} md={4} style={{
@@ -98,7 +121,7 @@ function LoginPage() {
                     <Col xs={2}><img src={twitterLogo} alt=''/></Col>
                     <Col xs={2} ><img src={linkedinLogo} alt=''/></Col>
             </Col>
-        </Row>
+        </Row> */}
         
     </Container>
 </div>

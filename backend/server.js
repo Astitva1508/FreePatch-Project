@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000
 const connectServer=async ()=>{
     
     try {
-        await connectDB('mongodb+srv://astitva:1234@nodeandexpressprojects.dh0qsg3.mongodb.net/FreePatch?retryWrites=true&w=majority')
+        await connectDB(process.env.MONGO_URI)
         app.listen(PORT,()=>console.log(`Server Listening on PORT ${PORT}`))
     } catch (error) {
         console.log(error)

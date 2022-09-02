@@ -10,8 +10,7 @@ const Input = () => {
                 <input type="text" class="form-control" placeholder="Place product link" />
             </InputGroup>
             <InputGroup className="order-btn">
-                <button type="submit" class="link-btn">LOREM IPSUM</button>
-                <button type="submit" class="link-btn">LOREM CONSECTETUR</button>
+                <button type="submit" class="link-btn fw-bold" style={{width:'100px'}}>GO</button>
             </InputGroup>
         </section>
     </React.Fragment>
