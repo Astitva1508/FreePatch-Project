@@ -1,25 +1,24 @@
 const app = require('./index')
 const connectDB = require('./db/connect')
-
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT ||3000
 
 const connectServer=async ()=>{
-    
     try {
         await connectDB(process.env.MONGO_URI)
-        app.listen(PORT,()=>console.log(`Server Listening on PORT ${PORT}`))
+        const server = app.listen(PORT,()=>console.log(`Server Listening on PORT ${PORT}`));
+        console.log('Connected to Database')
     } catch (error) {
         console.log(error)
+        process.exit(0)
     }
 }
 
-connectServer();
+const cleanup = require('./utlis/exit-handler').Cleanup(myCleanup);
 
-process.on('unhandledRejection',(err)=>{
-    console.log('Unhandled Rejection')
-    console.log(err)
-})
-process.on('uncaughtException',(err)=>{
-    console.log('Uncaught Exception')
-    console.log(err)
-})
+function myCleanup() {
+  console.log('App specific cleanup code...');
+};
+
+
+
+connectServer()

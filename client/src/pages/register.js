@@ -9,11 +9,11 @@ function RegisterPage() {
 
   return (
 <div>
-    <Navbar className='navbar'>
+    {/* <Navbar className='navbar'>
       <Container fluid style={{justifyContent:'center', letterSpacing:'2px'}}>
         <Navbar.Brand className="company-name" href="/">FreePatch</Navbar.Brand>
       </Container>
-    </Navbar>
+    </Navbar> */}
     <Container fluid className='login-container my-5 '>
         <Col>
             <h1 class='fw-bold py-3'>Create Account</h1>

@@ -1,6 +1,7 @@
 import React from 'react'
 import {InputGroup} from 'react-bootstrap'
 import '../styles/input.css'
+import { Link } from 'react-router-dom'
 
 const Input = () => {
   return (
@@ -10,7 +11,7 @@ const Input = () => {
                 <input type="text" class="form-control" placeholder="Place product link" />
             </InputGroup>
             <InputGroup className="order-btn">
-                <button type="submit" class="link-btn fw-bold" style={{width:'100px'}}>GO</button>
+                <Link to='/productInfo'><button type="submit" class="link-btn fw-bold" style={{width:'100px'}}>GO</button></Link>
             </InputGroup>
         </section>
     </React.Fragment>

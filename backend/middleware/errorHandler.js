@@ -1,12 +1,27 @@
 const {CustomAPIError} = require('../errors')
+const {StatusCodes} = require('http-status-codes')
 
 const customErrorHAndler = async(err,req,res,next)=>{
-    if (err instanceof CustomAPIError){
-        console.log(err.stack)
-        return res.json({err:err.msg})
+    const customErrorObject={
+        statusCode:err.statusCode||StatusCodes.INTERNAL_SERVER_ERROR,
+        msg:err.message||'Something went wrong , Please try again'
     }
-    console.log(err.stack)
-    res.status(500).json({msg:`Internal Server Error ${err}`})
+
+    if (err.code && err.code===11000){
+        customErrorObject.msg = `Duplicate value entered for ${Object.keys(err.keyValue)} field, please choose another value`
+        customErrorObject.statusCode = StatusCodes.BAD_REQUEST
+    }
+
+    if (err.name==='ValidationError'){
+        customErrorObject.msg = Object.values(err.errors)
+        .map((item) => item.message)
+        .join(',')
+    customErrorObject.statusCode = 400
+    }
+
+    console.log(err.stack||err)
+
+    res.status(customErrorObject.statusCode).json({success:false,message:customErrorObject.msg,name:err.name})
 }
 
 module.exports=customErrorHAndler

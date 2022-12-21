@@ -16,11 +16,11 @@ function LoginPage() {
     
   return (
 <div>
-    <Navbar className='navbar'>
+    {/* <Navbar className='navbar'>
       <Container fluid style={{justifyContent:'center', letterSpacing:'2px'}}>
         <Navbar.Brand className="company-name" href="/">FreePatch</Navbar.Brand>
       </Container>
-    </Navbar>
+    </Navbar> */}
     <Container fluid className='login-container my-5 '>
         <Col>
             <h1 class='fw-bold py-3'>Sign-In</h1>
@@ -33,7 +33,7 @@ function LoginPage() {
                     <Form.Label htmlFor="" className='fw-semibold'>Password</Form.Label>
                     <InputGroup className="mb-1 password-input">
                         <Form.Control type="password" className='password-input-box' ref={inputReference}/>
-                        <span onClick={passwordVisibility} class="input-group-text">
+                        <span onClick={passwordVisibility} className="input-group-text">
                         {!showPassword?<i class="fa-solid fa-eye"></i>:<i class="fa-solid fa-eye-slash"></i>}
                         </span>
                     </InputGroup>
@@ -95,7 +95,7 @@ function LoginPage() {
 
         <Row style={{justifyContent:'center'}}>
             <Col md={6} className='social-login-icons'>
-                    <GoogleButton />
+                <GoogleButton/>
             </Col>
         </Row> 
 
@@ -122,7 +122,7 @@ function LoginPage() {
                     <Col xs={2} ><img src={linkedinLogo} alt=''/></Col>
             </Col>
         </Row> */}
-        
+    
     </Container>
 </div>
   );

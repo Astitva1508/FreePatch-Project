@@ -1,3 +1,4 @@
-const CustomAPIError = require('./customAPIError')
+const CustomAPIError = require('./custom-api')
+const UnauthenticatedError=require('./unauthenticated')
 
-module.exports={CustomAPIError}
+module.exports={CustomAPIError,UnauthenticatedError}

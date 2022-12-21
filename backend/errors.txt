@@ -1,0 +1,16 @@
+Programming Errors:
+Reference Error: something is not defined
+
+
+Operational Errors:
+
+
+Mongoose Server Selection Error:
+
+
+TypeError:expected a [function,string,object] but got an [object,string,function]
+
+
+https://www.toptal.com/nodejs/node-js-error-handling
+https://blog.heroku.com/best-practices-nodejs-errors
+https://sematext.com/blog/node-js-error-handling/
